@@ -19,6 +19,7 @@ describe('<Page />', () => {
           fetchUserInfo={() => {}}
           changePageTitle={() => {}}
           societyInfo={{}}
+          updating={false}
         >
           content
         </Page>
