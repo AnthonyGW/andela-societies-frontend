@@ -15,6 +15,8 @@ const SingleInput = props => (
       className='formField__control'
       name={props.name}
       type={props.type}
+      value={props.value}
+      onChange={props.handleChange}
     />
   </div>
 );
