@@ -158,4 +158,12 @@ describe('<LogActivityForm />', () => {
     instance.handleAddEvent(event, 'date');
     expect(instance.renderValidationError).toHaveBeenCalled();
   });
+
+  it('should add numberOf to errors fields if is not set when bootcamp interviews is selected', () => {
+    const instance = wrapper.instance();
+    jest.spyOn(instance, 'handleAddEvent');
+    wrapper.setState({ activityTypeId: 'id1' });
+    instance.handleAddEvent(event);
+    expect(instance.state.errors).toContain('numberOf');
+  });
 });
